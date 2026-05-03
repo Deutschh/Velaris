@@ -59,7 +59,7 @@ export default function Hero() {
             whileHover={{ y: -1 }}
             className="flex items-center gap-3"
           >
-            <div className="grid h-18 w-18 place-items-center rounded-full text-black">
+            <div className="grid h-18 w-18 place-items-center rounded-full text-black hidden lg:flex">
               <img src={Logo} alt="Logo Velaris" className="h-full w-full" />
             </div>
             <span className="hidden text-xs font-semibold uppercase tracking-[0.24em] text-white/70 sm:block">
@@ -68,7 +68,7 @@ export default function Hero() {
           </motion.a>
 
           <div className="justify-end flex gap-x-6">
-            <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1.5 text-sm backdrop-blur-xl md:flex">
+            <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1.5 text-sm backdrop-blur-xl lg:flex">
               {["Projetos", "Processo", "Galeria", "Contato"].map((item) => (
                 <motion.a
                   key={item}
@@ -89,76 +89,16 @@ export default function Hero() {
                 onMouseEnter={() => setCursorActive(true)}
                 onMouseLeave={() => setCursorActive(false)}
                 whileHover={{ y: -1 }}
-                className="hidden rounded-full border border-white/15 bg-white px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-white/90 md:inline-flex"
+                className="hidden rounded-full border border-white/15 bg-white px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-white/90 lg:inline-flex"
               >
                 Começar
               </motion.a>
             </div>
 
-            <button
-              onClick={() => setMenuOpen(true)}
-              className="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/[0.04] text-white/70 backdrop-blur-xl md:hidden"
-            >
-              <Menu className="h-5 w-5" />
-            </button>
+
           </div>
 
-          {menuOpen && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="fixed inset-0 z-50 bg-[#0A0A0F]/95 px-6 py-6 backdrop-blur-xl md:hidden"
-            >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="grid h-9 w-9 place-items-center rounded-full bg-white text-black">
-                    <span className="text-sm font-black tracking-[-0.08em]">
-                      DS
-                    </span>
-                  </div>
-                  <span className="text-xs font-semibold uppercase tracking-[0.24em] text-white/70">
-                    Deutschh Studio
-                  </span>
-                </div>
 
-                <button
-                  onClick={() => setMenuOpen(false)}
-                  className="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/[0.04] text-2xl leading-none text-white/70"
-                >
-                  ×
-                </button>
-              </div>
-
-              <nav className="mt-20 flex flex-col gap-6">
-                {["Projetos", "Processo", "Galeria", "Contato"].map(
-                  (item, index) => (
-                    <motion.a
-                      key={item}
-                      href={`#${item.toLowerCase()}`}
-                      onClick={() => setMenuOpen(false)}
-                      initial={{ opacity: 0, y: 18 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.06 }}
-                      className="border-b border-white/10 pb-5 font-serif text-4xl text-white"
-                    >
-                      {item}
-                    </motion.a>
-                  ),
-                )}
-
-                <motion.a
-                  href="#contato"
-                  onClick={() => setMenuOpen(false)}
-                  initial={{ opacity: 0, y: 18 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.28 }}
-                  className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-6 py-4 text-sm font-semibold text-black"
-                >
-                  Solicitar análise gratuita
-                </motion.a>
-              </nav>
-            </motion.div>
-          )}
         </header>
 
         <div className="relative z-10 mx-auto flex min-h-50/100 max-w-5xl flex-col items-center justify-center px-4 text-center md:px-8 my-20">
