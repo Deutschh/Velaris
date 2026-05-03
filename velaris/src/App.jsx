@@ -3,6 +3,8 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import Hero from "./sections/Hero";
 import PainSection from "./sections/Pain";
 import Navigation from "./Components/Navigation";
+import SolutionSection from "./sections/Solutio";
+import ProofSection from "./sections/Proof";
 
 export default function App() {
 
@@ -15,7 +17,12 @@ export default function App() {
       <section id="diagnostico">
         <PainSection />
       </section>
-      <div className="h-[1980px] w-full bg-red-900"></div>
+      <section id="processo">
+        <SolutionSection />
+      </section>
+      <section id="prova">
+        <ProofSection />
+      </section>
     </div>
   );
 }

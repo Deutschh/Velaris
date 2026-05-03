@@ -100,7 +100,7 @@ export default function PainSection() {
 
           <a
             href="#solucao"
-            className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-white/45 transition hover:text-white"
+            className="mt-7 inline-flex items-center gap-2 text-sm font-medium hover:scale-110 duration-700  transition text-white"
           >
             Ver como resolvemos isso
             <span>→</span>
