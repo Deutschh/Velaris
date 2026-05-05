@@ -5,6 +5,9 @@ import PainSection from "./sections/Pain";
 import Navigation from "./Components/Navigation";
 import SolutionSection from "./sections/Solutio";
 import ProofSection from "./sections/Proof";
+import ProcessSection from "./sections/Process";
+import TrustSection from "./sections/Trust";
+import CTASection from "./sections/CTA";
 
 export default function App() {
 
@@ -17,11 +20,20 @@ export default function App() {
       <section id="diagnostico">
         <PainSection />
       </section>
-      <section id="processo">
+      <section id="solucao">
         <SolutionSection />
       </section>
       <section id="prova">
         <ProofSection />
+      </section>
+      <section id="proce">
+        <ProcessSection />
+      </section>
+      <section id="confianca">
+        <TrustSection />
+      </section>
+      <section id="contato">
+        <CTASection />
       </section>
     </div>
   );

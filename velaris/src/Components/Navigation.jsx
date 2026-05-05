@@ -10,8 +10,10 @@ import {
   Menu,
   X,
   ArrowRight,
+  ShieldCheck,
 } from "lucide-react";
 import Logo from "../assets/Logo.svg";
+import InstagramLogo from "../assets/Previews/Instagram.svg";
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,9 +31,21 @@ export default function Navigation() {
       href: "#diagnostico",
       id: "diagnostico",
     },
-    { icon: Wand2, label: "Processo", href: "#processo", id: "processo" },
-    { icon: Image, label: "Galeria", href: "#galeria", id: "galeria" },
-    { icon: Briefcase, label: "Projetos", href: "#projetos", id: "projetos" },
+    { icon: Wand2, label: "Solução", href: "#solucao", id: "solucao" },
+    { icon: Image, label: "Prova", href: "#galeria", id: "galeria" },
+    { icon: Briefcase, label: "Processo", href: "#proce", id: "proce" },
+    {
+      icon: ShieldCheck,
+      label: "Confiança",
+      href: "#confianca",
+      id: "confianca",
+    },
+    {
+      icon: MessageCircle,
+      label: "Contato",
+      href: "#contato",
+      id: "contato",
+    },
   ];
 
   const shouldHideSidebar = !isPastHome;
@@ -201,17 +215,24 @@ export default function Navigation() {
 
           <div className="flex flex-col items-center gap-2">
             <motion.a
-              href="#contato"
-              onClick={(event) => handleNavigate(event, "#contato")}
-              whileHover={{ y: -1, scale: 1.04 }}
+              href="https://instagram.com/seuusuario"
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ y: -1, scale: 1.06 }}
               whileTap={{ scale: 0.96 }}
-              className={`grid h-11 w-11 place-items-center rounded-full transition ${
-                isContactActive
-                  ? "bg-white text-black shadow-[0_0_30px_rgba(255,255,255,0.18)]"
-                  : "bg-white/[0.06] text-white/55 hover:bg-white hover:text-black"
-              }`}
+              className="group relative grid h-11 w-11 place-items-center overflow-hidden rounded-full bg-gradient-to-tr from-[#feda75] via-[#d62976] to-[#4f5bd5] shadow-[0_12px_35px_rgba(214,41,118,0.35)] transition"
             >
-              <MessageCircle className="h-[18px] w-[18px]" />
+              <span className="absolute inset-0 bg-white/0 transition group-hover:bg-white/10" />
+
+              <img
+                src={InstagramLogo}
+                alt="Instagram"
+                className="relative z-10 h-[20px] w-[20px]"
+              />
+
+              <span className="pointer-events-none absolute left-14 rounded-full border border-white/10 bg-[#111118] px-3 py-1.5 text-xs font-medium text-white/70 opacity-0 shadow-xl backdrop-blur-xl transition group-hover:opacity-100">
+                Instagram
+              </span>
             </motion.a>
           </div>
         </div>
