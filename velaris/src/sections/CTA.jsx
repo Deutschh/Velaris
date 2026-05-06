@@ -100,7 +100,7 @@ export default function FinalCTASection() {
               </a>
 
               <a
-                href="https://instagram.com/"
+                href="https://instagram.com/velaris_studioo"
                 target="_blank"
                 rel="noreferrer"
                 className="grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/[0.04] text-white/55 transition hover:bg-white hover:text-black"

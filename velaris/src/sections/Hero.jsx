@@ -69,7 +69,7 @@ export default function Hero() {
 
           <div className="justify-end flex gap-x-6">
             <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1.5 text-sm backdrop-blur-xl lg:flex">
-              {["Projetos", "Processo", "Galeria", "Contato"].map((item) => (
+              {["Diagnóstico", "Solução", "Galeria", "Processo", "Confianca", "Contato"].map((item) => (
                 <motion.a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -146,7 +146,8 @@ export default function Hero() {
             className="mt-10 flex flex-col items-center gap-4 sm:flex-row"
           >
             <motion.a
-              href="#contato"
+              href="https://wa.me/+5511917123701"
+              target="_blank"
               onMouseEnter={() => setCursorActive(true)}
               onMouseLeave={() => setCursorActive(false)}
               whileHover={{ y: -6, scale: 1.02 }}
@@ -161,14 +162,14 @@ export default function Hero() {
             </motion.a>
 
             <motion.a
-              href="#contato"
+              href="#processo"
               onMouseEnter={() => setCursorActive(true)}
               onMouseLeave={() => setCursorActive(false)}
               whileHover={{ y: -3, scale: 1.015 }}
               whileTap={{ scale: 0.98 }}
               className="inline-flex items-center justify-center gap-3 rounded-full border border-white/10 bg-transparent px-7 py-4 text-sm font-semibold text-white/50 transition hover:border-white/20 hover:bg-white/[0.04] hover:text-white"
             >
-              Conhecer Galeria
+              Ver Como Funciona
               <LayoutDashboard />
             </motion.a>
           </motion.div>
